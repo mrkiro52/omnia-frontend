@@ -1,8 +1,8 @@
 // Константы для изображений используемых в приложении
 
-// Логотипы
-export const LOGO_MAIN = '/logo.svg'
-export const LOGO_SMALL = '/logosm.svg'
+// Логотипы - используем пути с base для GitHub Pages
+export const LOGO_MAIN = '/omnia-frontend/logo.svg'
+export const LOGO_SMALL = '/omnia-frontend/logosm.svg'
 
 // Дефолтные аватары для fallback
 export const DEFAULT_AVATAR_1 = 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'

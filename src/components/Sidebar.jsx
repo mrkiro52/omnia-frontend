@@ -57,11 +57,11 @@ export default function Sidebar() {
   const handleLogout = () => {
     localStorage.removeItem('isAuthenticated')
     localStorage.removeItem('user')
-    navigate('/login')
+    navigate('login')
   }
 
   const handleProfileClick = () => {
-    navigate('/profile')
+    navigate('profile')
   }
 
   const user = JSON.parse(localStorage.getItem('user') || '{}')
