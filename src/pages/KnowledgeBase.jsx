@@ -13,7 +13,7 @@ export default function KnowledgeBase() {
     loadCategories()
   }, [])
 
-  // Загружаем статьи при выборе категории
+
   useEffect(() => {
     if (selectedCategory) {
       loadArticles(selectedCategory.id)
