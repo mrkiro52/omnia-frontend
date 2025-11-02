@@ -21,7 +21,7 @@ export default function AdminPanel() {
     title: '',
     type: 'lesson',
     content: '',
-    category: '' // Будет установлена первая доступная категория
+    category: ''
   })
   const [showCreateCategoryModal, setShowCreateCategoryModal] = useState(false)
   const [showEditCategoryModal, setShowEditCategoryModal] = useState(false)
