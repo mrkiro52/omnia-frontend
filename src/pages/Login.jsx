@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
 export default function Login() {
@@ -7,6 +7,16 @@ export default function Login() {
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState('')
   const navigate = useNavigate()
+
+  // Проверяем, не авторизован ли уже пользователь
+  useEffect(() => {
+    const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'
+    const userToken = localStorage.getItem('userAccessToken')
+    
+    if (isAuthenticated && userToken) {
+      navigate('/posts')
+    }
+  }, [navigate])
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -33,8 +43,8 @@ export default function Login() {
         localStorage.setItem('user', JSON.stringify(data.data.user))
         localStorage.setItem('userAccessToken', data.data.token)
         
-        // Перенаправляем пользователя
-        navigate('/knowledge-base')
+        // Перенаправляем пользователя на главную страницу
+        navigate('/posts')
       } else {
         setError(data.message || 'Ошибка авторизации')
       }

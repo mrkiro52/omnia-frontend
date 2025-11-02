@@ -20,6 +20,9 @@ import AdminPanel from './pages/AdminPanel'
 import Landing from './pages/Landing'
 
 function App() {
+  // Проверяем авторизацию пользователя
+  const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'
+  
   return (
     <Router>
       <Routes>
@@ -52,9 +55,9 @@ function App() {
           <Route path="events/:eventId" element={<Events />} />
         </Route>
         
-        {/* Редирект на авторизацию для всех остальных маршрутов */}
+        {/* Редирект для всех остальных маршрутов */}
         <Route path="*" element={
-          isAuthenticated ? <Navigate to="/" replace /> : <Navigate to="/login" replace />
+          isAuthenticated ? <Navigate to="/posts" replace /> : <Navigate to="/login" replace />
         } />
       </Routes>
     </Router>
