@@ -53,7 +53,9 @@ function App() {
         </Route>
         
         {/* Редирект на авторизацию для всех остальных маршрутов */}
-        <Route path="*" element={<Navigate to="/login" replace />} />
+        <Route path="*" element={
+          isAuthenticated ? <Navigate to="/" replace /> : <Navigate to="/login" replace />
+        } />
       </Routes>
     </Router>
   )
