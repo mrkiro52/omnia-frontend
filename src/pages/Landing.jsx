@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { LOGO_MAIN } from '../assets/images';
 
 const Landing = () => {
   const [formData, setFormData] = useState({
@@ -85,7 +86,7 @@ const Landing = () => {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center space-x-3">
               <img 
-                src="/logo.svg" 
+                src={LOGO_MAIN} 
                 alt="Omnia Logo" 
                 className="w-8 h-8"
               />
@@ -374,7 +375,7 @@ const Landing = () => {
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className="flex items-center justify-center space-x-3">
             <img 
-              src="/logo.svg" 
+              src={LOGO_MAIN} 
               alt="Omnia Logo" 
               className="w-6 h-6"
             />

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { LOGO_SMALL } from '../assets/images';
 
 const Desktop = () => {
   const [background, setBackground] = useState(() => {
@@ -368,7 +369,7 @@ const Desktop = () => {
           : 'bg-white/20 border border-white/30'
       }`}>
         <img 
-          src="/logosm.svg" 
+          src={LOGO_SMALL} 
           alt="Logo" 
           className="object-contain w-full h-full"
         />

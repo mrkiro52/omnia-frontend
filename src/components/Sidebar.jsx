@@ -1,4 +1,5 @@
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { LOGO_MAIN, DEFAULT_USER_AVATAR } from '../assets/images'
 
 const navigation = [
   {
@@ -91,7 +92,7 @@ export default function Sidebar() {
         <div className="p-6 border-b border-zinc-200">
           <div className="flex items-center space-x-3">
             <img 
-              src="/logo.svg" 
+              src={LOGO_MAIN} 
               alt="Omnia Logo" 
               className="w-10 h-10"
             />
@@ -107,7 +108,7 @@ export default function Sidebar() {
           <div className="flex items-center space-x-3">
             <div className={getRankBorderColor(user.rank)}>
               <img
-                src={user.avatar || 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'}
+                src={user.avatar || DEFAULT_USER_AVATAR}
                 alt={user.name}
                 className="object-cover w-10 h-10 rounded-full"
               />

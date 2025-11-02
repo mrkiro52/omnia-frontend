@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { DEFAULT_AVATAR_1, DEFAULT_AVATAR_2, DEFAULT_AVATAR_3, DEFAULT_AVATAR_4 } from '../assets/images'
 
 const CATEGORIES = ['Все', 'Frontend', 'Backend', 'QA', 'UI/UX', 'Резюме', 'Алгоритмы']
 
@@ -32,7 +33,7 @@ const MOCK_POSTS = [
     id: 1,
     author: {
       name: 'Анна Смирнова',
-      avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face'
+      avatar: DEFAULT_AVATAR_4
     },
     category: 'Frontend',
     title: 'Лучшие практики работы с React Hooks',
@@ -46,7 +47,7 @@ const MOCK_POSTS = [
         id: 1,
         author: {
           name: 'Иван Петров',
-          avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+          avatar: DEFAULT_AVATAR_2
         },
         content: 'Отличная статья! Особенно полезны примеры с useEffect. Можете больше рассказать про оптимизацию?',
         timestamp: '1 час назад'
@@ -55,7 +56,7 @@ const MOCK_POSTS = [
         id: 2,
         author: {
           name: 'Мария Козлова',
-          avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
+          avatar: DEFAULT_AVATAR_3
         },
         content: 'Спасибо за подробное объяснение кастомных хуков. Это именно то, что я искала!',
         timestamp: '30 минут назад'
@@ -66,7 +67,7 @@ const MOCK_POSTS = [
     id: 2,
     author: {
       name: 'Дмитрий Козлов',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+      avatar: DEFAULT_AVATAR_2
     },
     category: 'Backend',
     title: 'Микросервисы vs Монолит: что выбрать?',
@@ -80,7 +81,7 @@ const MOCK_POSTS = [
         id: 3,
         author: {
           name: 'Алексей Сидоров',
-          avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+          avatar: DEFAULT_AVATAR_1
         },
         content: 'У нас тоже была похожая миграция. Согласен, что главное - это команда и процессы.',
         timestamp: '3 часа назад'
@@ -91,7 +92,7 @@ const MOCK_POSTS = [
     id: 3,
     author: {
       name: 'Елена Волкова',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
+      avatar: DEFAULT_AVATAR_3
     },
     category: 'UI/UX',
     title: 'Принципы создания интуитивных интерфейсов',
@@ -106,7 +107,7 @@ const MOCK_POSTS = [
     id: 4,
     author: {
       name: 'Максим Петров',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+      avatar: DEFAULT_AVATAR_1
     },
     category: 'QA',
     title: 'Автоматизация тестирования: с чего начать?',

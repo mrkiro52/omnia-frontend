@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { DEFAULT_USER_AVATAR } from '../assets/images'
 
 export default function Profile() {
   const [user, setUser] = useState(null)
@@ -150,14 +151,14 @@ export default function Profile() {
               {rankInfo.rank === 'Легенда' ? (
                 <div className={`${rankInfo.borderColor} rounded-full`}>
                   <img
-                    src={user.avatar}
+                    src={user.avatar || DEFAULT_USER_AVATAR}
                     alt={`${user.name} ${user.surname}`}
                     className="object-cover w-20 h-20 rounded-full"
                   />
                 </div>
               ) : (
                 <img
-                  src={user.avatar}
+                  src={user.avatar || DEFAULT_USER_AVATAR}
                   alt={`${user.name} ${user.surname}`}
                   className={`w-20 h-20 rounded-full object-cover border-4 ${rankInfo.borderColor}`}
                 />
