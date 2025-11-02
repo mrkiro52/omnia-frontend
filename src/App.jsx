@@ -24,15 +24,15 @@ function App() {
   const isAuthenticated = localStorage.getItem('isAuthenticated') === 'true'
   
   return (
-    <Router>
+    <Router basename="/omnia-frontend">
       <Routes>
         {/* Публичные маршруты */}
-        <Route path="/landing" element={<Landing />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="landing" element={<Landing />} />
+        <Route path="login" element={<Login />} />
         
         {/* Админ маршруты */}
-        <Route path="/admin/login" element={<AdminLogin />} />
-        <Route path="/admin" element={<AdminPanel />} />
+        <Route path="admin/login" element={<AdminLogin />} />
+        <Route path="admin" element={<AdminPanel />} />
         
         {/* Защищенные маршруты с Layout */}
         <Route path="/" element={
@@ -41,7 +41,7 @@ function App() {
           </ProtectedRoute>
         }>
           {/* Редирект с корня на ленту постов */}
-          <Route index element={<Navigate to="/posts" replace />} />
+          <Route index element={<Navigate to="posts" replace />} />
           
           {/* Основные страницы */}
           <Route path="dashboard" element={<Dashboard />} />
@@ -57,7 +57,7 @@ function App() {
         
         {/* Редирект для всех остальных маршрутов */}
         <Route path="*" element={
-          isAuthenticated ? <Navigate to="/posts" replace /> : <Navigate to="/login" replace />
+          isAuthenticated ? <Navigate to="posts" replace /> : <Navigate to="login" replace />
         } />
       </Routes>
     </Router>

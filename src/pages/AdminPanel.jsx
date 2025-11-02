@@ -82,7 +82,7 @@ export default function AdminPanel() {
     const adminToken = localStorage.getItem('adminAccessToken')
     
     if (!isAdmin || !adminToken) {
-      navigate('/admin/login')
+      navigate('admin/login')
       return
     }
 

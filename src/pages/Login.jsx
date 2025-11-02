@@ -44,7 +44,7 @@ export default function Login() {
         localStorage.setItem('userAccessToken', data.data.token)
         
         // Перенаправляем пользователя на главную страницу
-        navigate('/posts')
+        navigate('posts')
       } else {
         setError(data.message || 'Ошибка авторизации')
       }
@@ -113,7 +113,7 @@ export default function Login() {
 
           <div className="mt-6 text-center">
             <Link 
-              to="/admin/login" 
+              to="admin/login" 
               className="text-sm transition-colors text-zinc-500 hover:text-zinc-700"
             >
               Вход для администратора

@@ -106,7 +106,7 @@ function Dashboard() {
           
           <div className="p-6">
             <button
-              onClick={() => navigate('/desktop')}
+              onClick={() => navigate('desktop')}
               className="flex items-center justify-center w-full px-6 py-3 space-x-2 font-medium text-white transition-all duration-200 rounded-lg cursor-pointer bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-600 hover:to-blue-700"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

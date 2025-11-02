@@ -29,7 +29,7 @@ export default function AdminLogin() {
         localStorage.setItem('isAdmin', 'true')
         localStorage.setItem('adminAccessToken', data.data.token)
         localStorage.setItem('adminUser', JSON.stringify(data.data.user))
-        navigate('/admin')
+        navigate('admin')
       } else {
         setError(data.message || 'Неверные данные администратора')
       }
@@ -107,7 +107,7 @@ export default function AdminLogin() {
           <div className="text-center">
             <button
               type="button"
-              onClick={() => navigate('/login')}
+              onClick={() => navigate('login')}
               className="text-sm cursor-pointer text-zinc-600 hover:text-zinc-900"
             >
               ← Вернуться к обычному входу

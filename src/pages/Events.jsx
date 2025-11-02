@@ -405,7 +405,7 @@ export default function Events() {
 
                 <div className="flex gap-2">
                   <button
-                    onClick={() => navigate(`/events/${event.id}`)}
+                    onClick={() => navigate(`events/${event.id}`)}
                     className="flex-1 px-4 py-2 transition-colors border rounded-lg cursor-pointer border-zinc-300 text-zinc-700 hover:bg-zinc-50"
                   >
                     Подробнее

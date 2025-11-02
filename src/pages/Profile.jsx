@@ -13,7 +13,7 @@ export default function Profile() {
     localStorage.removeItem('isAuthenticated')
     localStorage.removeItem('user')
     localStorage.removeItem('userAccessToken')
-    navigate('/login')
+    navigate('login')
   }
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function Profile() {
     try {
       const token = localStorage.getItem('userAccessToken')
       if (!token) {
-        navigate('/login')
+        navigate('login')
         return
       }
 
@@ -41,25 +41,25 @@ export default function Profile() {
           setFormData(result.data)
         } else {
           console.error('Invalid response format:', result)
-          navigate('/login')
+          navigate('login')
         }
       } else if (response.status === 401) {
         // Токен недействителен
         localStorage.removeItem('userAccessToken')
         localStorage.removeItem('user')
         localStorage.removeItem('isAuthenticated')
-        navigate('/login')
+        navigate('login')
       } else {
         console.error('Failed to load profile, status:', response.status)
         const errorData = await response.json().catch(() => ({}))
         console.error('Error details:', errorData)
         alert('Ошибка загрузки профиля. Попробуйте перезайти в аккаунт.')
-        navigate('/login')
+        navigate('login')
       }
     } catch (error) {
       console.error('Error loading profile:', error)
       alert('Ошибка соединения с сервером. Проверьте подключение к интернету.')
-      navigate('/login')
+      navigate('login')
     }
   }
 
@@ -67,7 +67,7 @@ export default function Profile() {
     try {
       const token = localStorage.getItem('userAccessToken')
       if (!token) {
-        navigate('/login')
+        navigate('login')
         return
       }
 

@@ -12,7 +12,7 @@ export default function ProtectedRoute({ children }) {
     localStorage.removeItem('userAccessToken')
     localStorage.removeItem('user')
     
-    return <Navigate to="/login" replace />
+    return <Navigate to="login" replace />
   }
   
   return children
